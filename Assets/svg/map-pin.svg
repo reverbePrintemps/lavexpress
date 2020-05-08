@@ -1,0 +1,5 @@
+<?xml-stylesheet type="text/css" href="../../App/style.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 5000 5000">
+  <defs/>
+  <path class="svg" stroke="red" fill-rule="nonzero" d="M2505.62 2616.94c-386.82 0-700.4-310.74-700.4-694.06 0-383.32 313.58-694.07 700.4-694.07s700.4 310.75 700.4 694.07c0 383.32-313.58 694.06-700.4 694.06zm4.8-1916.94c-691.51 0-1252.08 553.84-1252.08 1237.04 0 228.9 63 443.24 172.7 627.13L2367.02 4214a160.06 160.06 0 00278.14.54l944.67-1650.45c109.7-183.88 172.67-398.18 172.67-627.06 0-683.2-560.57-1237.04-1252.08-1237.04z"/>
+</svg>

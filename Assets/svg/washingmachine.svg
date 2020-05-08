@@ -1,0 +1,25 @@
+<?xml-stylesheet type="text/css" href="../../App/style.css" ?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 108">
+  <defs>
+    <filter id="a" width="1.02" height="1.04" x="-.01" y="-.02" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24.27"/>
+    </filter>
+  </defs>
+  <rect width="1920.2" height="1080" x="-914.7" y="-686.24" ry="0" transform="translate(76.85 -453.37)"/>
+  <g class="svg washingMachine" transform="translate(76.85 -453.37)">
+    <path d="M1.79 155.53a3.73 3.73 0 013.75 3.72v12.74h-82.18v-12.72a3.72 3.72 0 013.72-3.7zm-54.24 12.39a4.1 4.1 0 000-8.22 4.11 4.11 0 000 8.22zm-12.04 0a4.1 4.1 0 004.08-4.12 4.08 4.08 0 10-8.16 0 4.12 4.12 0 004.08 4.12zM-76.85 263.98v-82.5a3.73 3.73 0 013.72-3.72H1.61a3.72 3.72 0 013.72 3.72V264zm40.67-18.77a26.48 26.48 0 000-52.94 26.47 26.47 0 000 52.94z"/>
+    <path d="M-14.75 211.97a22.25 22.25 0 11-42.68-.45v.04a7.77 7.77 0 0010.84.57h-.03a7.74 7.74 0 0010.44-.16v.03a7.64 7.64 0 005.27 2.07c2.1 0 4.05-.83 5.41-2.2v.04a7.61 7.61 0 005.4 2.16 7.7 7.7 0 005.32-2.13z"/>
+    <flowRoot fill-opacity="1" stroke="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" stroke-width="1" font-family="Comfortaa" font-size="229.33" font-stretch="normal" font-style="normal" font-variant="normal" font-weight="700" letter-spacing="0" style="line-height:100%;-inkscape-font-specification:'Comfortaa Bold'" transform="matrix(.26458 0 0 .26458 -935.31 -665.81)" word-spacing="0" xml:space="preserve">
+      <flowRegion fill-opacity="1" font-family="Comfortaa" font-size="229.33" font-stretch="normal" font-style="normal" font-variant="normal" font-weight="700" style="line-height:100%;-inkscape-font-specification:'Comfortaa Bold'">
+        <path d="M371.74 413.02h6828.63v3652.71H371.74z" style="line-height:100%;-inkscape-font-specification:'Comfortaa Bold'"/>
+      </flowRegion>
+      <flowPara fill-opacity="1" font-size="533.33" style="line-height:100%">
+        Une chaine de laveries automatiques sur plusieurs arrondissements de Paris, à Saint-Denis et à Marseille.
+      </flowPara>
+    </flowRoot>
+    <g>
+      <path d="M1.79 453.37a3.73 3.73 0 013.75 3.72v12.75h-82.18v-12.72a3.72 3.72 0 013.72-3.71zm-54.24 12.4a4.1 4.1 0 000-8.22 4.11 4.11 0 000 8.22zm-12.04 0a4.1 4.1 0 004.08-4.13 4.08 4.08 0 10-8.16 0 4.12 4.12 0 004.08 4.12zM-76.85 561.82v-82.5a3.73 3.73 0 013.72-3.71H1.61a3.72 3.72 0 013.72 3.72v82.52zm40.67-18.76a26.48 26.48 0 000-52.94 26.47 26.47 0 000 52.94z"/>
+      <path d="M-14.75 509.82a22.25 22.25 0 11-42.68-.45v.03a7.77 7.77 0 0010.84.58h-.03a7.74 7.74 0 0010.44-.16v.02a7.64 7.64 0 005.27 2.07c2.1 0 4.05-.83 5.41-2.19v.03a7.61 7.61 0 005.4 2.16 7.7 7.7 0 005.32-2.12z"/>
+    </g>
+  </g>
+</svg>
