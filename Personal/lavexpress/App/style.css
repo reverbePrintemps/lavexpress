@@ -1,216 +1,114 @@
 /* TODOs */
-/* TODO Center bouncing arrow */
+/* TODO Center bouncing arrow and improve click area */
 /* TODO Optimize svg(s) (and other assets) */
-/* TODO Proper background gradient */
-
-/* ——————————— Bounce Keyframes ————————————— */
-
-@-moz-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
+/* TODO Bubbles dodge cursor? */
 
 /* ———————————————— Styles —————————————————— */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  /* Override default of 8 */
-  margin: 0; 
-  padding: 0 5vmin;
-  font-family: 'Comfortaa', cursive;
-  color: white;
-  overflow-x: hidden;
-  background: linear-gradient(to bottom, #81DBFF, #006FBF);
-}
-
-section p {
-  line-height: 10vmin;
-}
-
-.full-viewport-height {
-  height: 100vh;
-}
-
-.hero {
-  height: 100%;
-  display: flex;
-}
-
-.titleContainer {
-  display: flex;
-  flex-direction: column; 
-  margin: auto;
-}
-
-.titleContainer {
-  margin: auto;
+  margin: 0;
+  font-family: "Comfortaa", cursive;
+  color: #f1f1f1;
   text-align: center;
+}
+
+.topLevelContainer {
+  padding: 0 5vw;
+}
+
+.invisibleHeader {
+  height: 10vh;
+}
+
+.header {
+  text-align: center;
+  font-size: 8vmin;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.header.sticky {
+  background-color: #088cc2;
+}
+
+.sticky .header__logo {
+  width: 100px;
+  height: 113px;
+  background-size: cover;
+  background-image: url(../Assets/lav_express_logo_white.svg);
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  margin: auto 0 auto 2vw;
 }
 
 .title {
-  font-size: 14vmin;
-  white-space: nowrap;
+  margin: 0;
 }
 
 .subtitle {
-  padding-top: 10vmin;
   font-size: 6vmin;
   line-height: 9vmin;
+  padding-top: 15vh;
 }
 
-.click-area {
-  padding: 50px;
-  transform: translate(-30%, -35%);
+.content {
+  padding: 16px;
 }
 
-.infos-generales {
-  font-size: 5vmin;
-  line-height: 7vmin;
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
-.washing-machine {
-  display: inline;
-  vertical-align: middle;
-  width: 5.7vw;
-  height: 60px;
+section {
+  height: 100vh;
+  text-align: left;
 }
 
-.why-us {
-  display: block;
-  width: 100vw;
-}
-
-.icon {
-  display: block !important;
-  position: relative;
-  font-size: 5vw !important;
+section:first-of-type {
   text-align: center;
-  top: 50%;
+}
+
+section p {
+  background: #f1f1f1;
+  color: #088cc2;
+  font-size: 4vmin;
+  line-height: 6vmin;
+  padding: 4vh 2vw;
+  position: sticky;
+  top: 32vh;
+}
+
+section h3 {
+  font-size: 6vmin;
+  position: sticky;
+  top: 22vh;
 }
 
 .perks {
-  display: block;
-  position: relative;
-  font-size: 2vw;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.perks p {
-  display: inline-block;
-  margin-top: 50px;
-  max-width: 250px;
-}
-
-footer {
   display: flex;
-  position: absolute;
-  background-color: #005694;
-  width: 100vw;
-  height: 15vh;
-
-  bottom: 0;
 }
 
-.footer-logo {
-  display: flex;
-  align-items: center;
-  padding-left: 3%;
+.perk {
+  width: 25vw;
 }
 
-.footer-logo img {
-  height: 40px;
-}
+/* ———————————— PARTICLES.JS CSS ———————————— */
 
-.footer-logo p {
-  display: inline;
-  font-size: 30px;
-  padding-left: 20px;
-  padding-top: 20px;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: 20px;
-  align-content: flex-end;
-  flex-direction: row;
-
-}
-
-.navbar div {
-  margin-right: 30px;
-}
-
-.navbar div a {
-  text-decoration: none;
-  color: white;
-  transition: box-shadow 0.2s ease;
-  margin: 0.5em;
-}
-
-.navbar div a:hover {
-  box-shadow: 0px 10px 0px -1px white; 
-}
-
-
-
-/* PARTICLES.JS CSS */
-
-/* ---- particles.js container ---- */
 #particles-js {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #1BAAE4;
-  /* Compensate body padding */
-  margin: 0 -5vmin;
-} 
+  background-image: linear-gradient(rgb(6, 135, 187), rgb(35, 184, 246));
+  top: 0;
+  z-index: -1;
+}
 /* ---- stats.js ---- */
 .count-particles {
   background: #000022;
@@ -244,19 +142,13 @@ footer {
   border-radius: 0 0 3px 3px;
 }
 
-/* END OF PARTICLES.JS CSS */
-
-/* Keep section position relative for to not mess up scrollIntoView action of on arrow click */
-section {
-  display: flex;
-  position: relative;
-}
+/* ———————————— Arrow  ———————————— */
 
 .arrow {
   height: 40px;
   width: 40px;
   position: absolute;
-  /*   border: 1px solid red; */
+  position: fixed;
   bottom: 20px;
   left: 50%;
   margin-left: -20px;
@@ -269,4 +161,67 @@ section {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
+}
+
+/* ——————————— Arrow bounce keyframes ————————————— */
+
+@-moz-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
 }
