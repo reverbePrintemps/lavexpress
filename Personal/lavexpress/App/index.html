@@ -22,64 +22,197 @@
   </head>
 
   <body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa:700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- particles.js container -->
     <div id="particles-js"></div>
-    <div class="topLevelContainer">
-      <div class="invisibleHeader"></div>
+    <section id="page-1">
+      <h1 class="maxiGlow">Lavexpress</h1>
+      <a href="#page-2">
+        <div class="arrow bounce">
+          <div class="click-area"></div>
+        </div>
+      </a>
+      <canvas
+        class="particles-js-canvas-el"
+        style="width: 100%; height: 100%;"
+        width="960"
+        height="767"
+      ></canvas>
+    </section>
 
-      <div class="header" id="myHeader">
-        <div class="header__logo"></div>
-        <h1 class="title">Lav Express</h1>
-      </div>
+    <div class="sectionsContainer">
+      <header>
+        <nav class="navbar">
+          <div class="navbar-left">
+            <a href="#page-1">Lavexpress</a>
+          </div>
+          <div class="navbar-right">
+            <a href="#page-2">Qui sommes-nous</a>
+            <a href="#page-3">Pourquoi nous</a>
+            <a href="#page-4">Nos tarifs</a>
+            <a href="#page-5">Nos adresses</a>
+          </div>
+        </nav>
+      </header>
+      <section id="page-2">
+        <h2 class="miniGlow">Qui sommes-nous ?</h2>
+        <p>
+          Une chaine de laveries automatiques sur plusieurs arrondissements de
+          Paris, à Saint-Denis et à Marseille.<br />
+          <br />
+          Lav Express met à disposition des services de laveries automatiques
+          ouvertes 7/7 équipées de matériel professionnel et performant
+          ELECTROLUX, des machines à laver de multiples capacités (6/7/11 et
+          18kg) et séchoirs de hautes qualités.
+        </p>
+        <a href="#page-3">
+          <div class="arrow bounce">
+            <div class="click-area"></div>
+          </div>
+        </a>
+      </section>
 
-      <div class="content">
-        <section id="page-1">
-          <h2 class="subtitle">
-            Une chaine de laveries automatiques sur plusieurs arrondissements de
-            Paris, à Saint-Denis et à Marseille.
-          </h2>
-          <a href="#page-2">
-            <div class="arrow bounce">
-              <div class="click-area"></div>
-            </div>
-          </a>
-        </section>
-        <section id="page-2">
-          <h3>A propos</h3>
-          <p>
-            Des modes de paiement simples d’utilisation et connectés, avec des
-            centrales de dernière génération (pièces, billets et paiement sans
-            contact), ayant un écran tactile entraînant un gain de temps dans le
-            processus d’achat.
-          </p>
-        </section>
-        <section class="pourquoiNous" id="page-3">
-          <h3>Pourquoi nous ?</h3>
-          <div class="perks">
-            <div class="perk auto">
-              <i class="fa fa-flash icon"></i>
+      <section id="page-3">
+        <div class="why-us">
+          <h2 class="miniGlow">Pourquoi nous ?</h2>
+          <div class="badges">
+            <div class="badge perk">
+              <i class="fa fa-flash badgeIcon"></i>
               <p>Libre accès et en self-service, entièrement automatisées</p>
             </div>
-            <div class="perk tarifs">
-              <i class="fa fa-money icon"></i>
+
+            <div class="badge perk">
+              <i class="fa fa-hand-holding-usd badgeIcon"></i>
               <p>Tarifs compétitifs</p>
             </div>
-            <div class="perk wifi">
-              <i class="fa fa-wifi icon"></i>
-              <p>Accès wifi</p>
+
+            <div class="badge perk">
+              <i class="fa fa-wifi badgeIcon"></i>
+              <p>Service WiFi dans chaque laverie.</p>
             </div>
-            <div class="perk ouverts">
-              <i class="fa fa-clock-o icon"></i>
+
+            <div class="badge perk">
+              <i class="fa fa-clock-o badgeIcon"></i>
               <p>
                 Ouvert 7/7j, service de dépannage en ligne sous 10 minutes
               </p>
             </div>
           </div>
-        </section>
-      </div>
-    </div>
+        </div>
+        <a href="#page-4">
+          <div class="arrow bounce">
+            <div class="click-area"></div>
+          </div>
+        </a>
+      </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+      <section id="page-4">
+        <h2 class="miniGlow">Nos tarifs</h2>
+        <div class="badges">
+          <div class="tarif">
+            <img src="../Assets/washingmachine.svg" class="badgeIcon"></img>
+            
+                <h3>Machine</h3>
+                <ul>
+                  <li>6kg = 3€</li>
+                  <li>7kg = 4€</li>
+                  <li>11kg = 6€</li>
+                  <li>18kg = 9€</li>
+                </ul>
+
+          </div>
+
+          <div class="tarif">
+            <img src="../Assets/washingmachine.svg" class="badgeIcon"></img>
+            <h3>Séchoir</h3>
+            <li>1€ les 8 minutes</li>
+          </div>
+
+          <div class="tarif">
+            <i class="fas fa-soap badgeIcon"></i>
+            <h3>Lessive et assouplissant liquide</h3>
+            <li>1€ la dosette</li>
+          </div>
+        </div>
+        <a href="#page-5">
+          <div class="arrow bounce">
+            <div class="click-area"></div>
+          </div>
+        </a>
+      </section>
+
+      <section id="page-5">
+        <h2 class="miniGlow">Nos adresses</h2>
+        <div class="badges">
+          <div class="ville">
+            <img src="../Assets/tour_eiffel.svg" class="badgeIcon"></img>
+              <h3>Paris</h3>
+              <ul>
+                <li>Rue pinel, Saint-denis 93200</li>
+                <li>27 rue Ramey, 75018 Paris</li>
+                <li>122 avenue de flandre, 75019 Paris</li>
+                <li>12 rue popincourt, 75011 Paris</li>
+                <li>52 rue des Gravilliers, 75003 Paris</li>
+                <li>20 rue de Lancry, 75010 Paris</li>
+                <li>67 rue de Cléry, 75002</li>
+                <li>7 rue du ponceau, 75002</li>
+              </ul>
+          </div>
+
+          <div class="ville">
+            <img src="../Assets/poisson.svg" class="badgeIcon"></img>
+            <h3>Marseille</h3>
+            <ul>
+              <li>12/14 boulevard de la fédération, 13004 Marseille</li>
+              <li>3bis rue adolphe thiers, 13001 Marseille</li>
+              <li>20 boulevard de la liberté, 13001 Marseille</li>
+              <li>17 rue des trois frères barthélemy, 13006 Marseille</li>
+              <li>14 rue du Docteur Fiolle, 13006 Marseille</li>
+              <li>108 rue kleber prolongée, 13003 Marseille</li>
+              <li>51 rue de Forbin, 13002 Marseille</li>
+              <li>2 traverse des rosiers, 13014 Marseille</li>
+            </ul>
+          </li>
+         </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+        <a class="footerTitle" href="#contact">Lavexpress</a>
+      <nav class="footerInfoContainer">
+        <div class="footerBadge">
+          <h4>Services</h4>
+          <p>Couettes, Couverture, Rideaux, Linge courant, Lessive..</p>
+        </div>
+        <div class="footerBadge">
+          <h4>Informations</h4>
+          <p>Siege social lavexpress 30 Rue pinel saint denis 93200 Siret 813866761 rcs bobigny</p>
+        </div>
+        <div class="footerBadge">
+          <h4>Contact</h4>
+          <p>Tél: 06 50 24 52 79<br>
+          salavexpress@gmail.com </p>
+        </div>
+        <div class="footerBadge">
+          <h4>Horaires</h4>
+          <p>Horaires : 7h00 - 23h00<br>
+          7/7 et jours fériés </p>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/546a0a5293.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
     <script src="app.js"></script>
   </body>
 </html>

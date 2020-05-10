@@ -1,9 +1,7 @@
-/* TODOs */
-/* TODO Center bouncing arrow and improve click area */
-/* TODO Optimize svg(s) (and other assets) */
-/* TODO Bubbles dodge cursor? */
-
-/* ———————————————— Styles —————————————————— */
+/* TODO */
+/* TODO Make responsive */
+/* TODO Don't rely on fontawesome loading icons (?) */
+/* TODO Align footer p to baseline */
 
 html {
   scroll-behavior: smooth;
@@ -12,104 +10,224 @@ html {
 body {
   margin: 0;
   font-family: "Comfortaa", cursive;
-  color: #f1f1f1;
-  text-align: center;
+  color: white;
+  overflow-x: hidden;
+  background: linear-gradient(#1baae4, #006fbf);
 }
 
-.topLevelContainer {
-  padding: 0 5vw;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.invisibleHeader {
-  height: 10vh;
-}
-
-.header {
-  text-align: center;
-  font-size: 8vmin;
-  white-space: nowrap;
-  z-index: 3;
-}
-
-.header.sticky {
-  background-color: #088cc2;
-}
-
-.sticky .header__logo {
-  width: 100px;
-  height: 113px;
-  background-size: cover;
-  background-image: url(../Assets/lav_express_logo_white.svg);
+h1 {
   position: absolute;
-  display: inline-block;
-  left: 0;
-  margin: auto 0 auto 2vw;
+  top: 40vh;
+  left: 50vw;
+  transform: translateX(-50%);
+  margin: auto;
+  font-size: 10vw;
+  color: white;
+  pointer-events: none;
 }
 
-.title {
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 6vmin;
-  line-height: 9vmin;
-  padding-top: 15vh;
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky {
+header {
   position: sticky;
-  top: 0;
+  display: flex;
   width: 100%;
+  height: 8vh;
+  background-color: rgba(0, 86, 148, 0.9);
+  z-index: 1;
+  transform: translateY(-100vh);
+  visibility: hidden;
+  top: 0;
+  transition: transform 0.5s, visibility 0.5s;
+}
+
+header.visible {
+  transform: translateY(0);
+  visibility: visible;
+  transition: transform 0.5s;
+}
+
+header a {
+  transition: box-shadow 0.2s ease;
+}
+
+header a:hover {
+  box-shadow: 0px 10px 0px -1px white;
+}
+
+h3 {
+  font-size: 4vmin;
+}
+
+li {
+  list-style: none;
+  font-size: 2vmin;
+  margin-top: 2vh;
+}
+
+ul {
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar-left a {
+  margin-left: 1vw;
+  font-size: 4vmin;
+}
+
+.navbar-right a {
+  margin-right: 1vw;
+}
+
+.click-area {
+  padding: 50px;
+  transform: translate(-30%, -35%);
+}
+
+.sectionsContainer {
+  padding: 0 11vmin;
+  /* Allow footer to not hide content */
+  padding-bottom: 6vh;
+}
+
+#page-1 {
+  height: 100vh;
 }
 
 section {
-  height: 100vh;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-section:first-of-type {
-  text-align: center;
+section h2 {
+  font-size: 5vmin;
+  margin: 0;
+  padding-top: 10vmin;
 }
 
 section p {
-  background: #f1f1f1;
-  color: #088cc2;
+  margin: auto;
   font-size: 4vmin;
-  line-height: 6vmin;
-  padding: 4vh 2vw;
-  position: sticky;
-  top: 32vh;
+  word-break: break-word;
+  line-height: 8vh;
 }
 
-section h3 {
-  font-size: 6vmin;
-  position: sticky;
-  top: 22vh;
+#page-2 p {
+  padding: 12vh 0;
 }
 
-.perks {
+.why-us {
   display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.badges {
+  display: flex;
+  text-align: center;
+  padding: 12vh 0 10vh;
+}
+
+.badge {
+  padding: 0 2vw;
 }
 
 .perk {
   width: 25vw;
 }
 
-/* ———————————— PARTICLES.JS CSS ———————————— */
+.perk p {
+  font-size: 3vmin;
+  padding-top: 8vh;
+  line-height: 6vh;
+}
 
+.tarif {
+  width: 33vw;
+}
+
+.badgeIcon {
+  max-width: 20vmin;
+  height: 14vh;
+  font-size: 11vmin;
+}
+
+.ville {
+  width: 50vw;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(0, 86, 148, 0.8);
+  text-align: center;
+  padding: 4vh 0 8vh;
+}
+
+.footerTitle {
+  font-size: 4vmin;
+}
+
+.footerInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 3vh 5vw 0;
+}
+
+.footerInfoContainer h4 {
+  font-size: 3vmin;
+}
+
+.footerInfoContainer p {
+  padding-top: 2vh;
+}
+
+.footerInfoContainer h4,
+.footerInfoContainer p {
+  margin: 0;
+}
+
+.footerBadge {
+  width: 25%;
+}
+
+.maxiGlow {
+  text-shadow: 1px 1px 10px white;
+}
+
+.miniGlow {
+  text-shadow: 1px 1px 4px white;
+}
+
+/* ——————————— PARTICLES.JS CSS ——————————— */
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+} /* ---- particles.js container ---- */
 #particles-js {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgb(6, 135, 187), rgb(35, 184, 246));
-  top: 0;
-  z-index: -1;
-}
-/* ---- stats.js ---- */
+  /*   background-color: #1BAAE4; */
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+} /* ---- stats.js ---- */
 .count-particles {
   background: #000022;
   position: absolute;
@@ -142,19 +260,21 @@ section h3 {
   border-radius: 0 0 3px 3px;
 }
 
-/* ———————————— Arrow  ———————————— */
+/* END OF PARTICLES.JS CSS */
+
+/* Keep section position relative for to not mess up scrollIntoView action of on arrow click */
 
 .arrow {
-  height: 40px;
-  width: 40px;
+  width: 4vmin;
+  height: auto;
   position: absolute;
-  position: fixed;
-  bottom: 20px;
+  bottom: 0;
   left: 50%;
   margin-left: -20px;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
   background-size: contain;
-  z-index: 1;
+  z-index: 0;
+  background-repeat: no-repeat;
 }
 
 .bounce {
@@ -162,8 +282,6 @@ section h3 {
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
 }
-
-/* ——————————— Arrow bounce keyframes ————————————— */
 
 @-moz-keyframes bounce {
   0%,

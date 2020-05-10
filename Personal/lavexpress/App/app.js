@@ -1,28 +1,21 @@
 // TODO
 
-// When the user resizes the page, execute myFunction
-window.onresize = function () {
-  myFunction();
-};
-// When the user scrolls the page, execute myFunction
-window.onscroll = function () {
-  myFunction();
-};
+var header = $("header");
 
-// Get the header
-var header = document.getElementById("myHeader");
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  // Get the offset position of the navbar
-  var sticky = header.offsetTop;
-  var headerHeight = $(header).height();
-  if (window.pageYOffset < headerHeight) {
-    header.classList.remove("sticky");
-  } else if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+$(window).scroll(function () {
+  var scroll = $(window).scrollTop();
+  var shazam = $("#page-2").offset().top;
+  if (scroll <= 0) {
+    $(header).removeClass("visible");
   }
-}
+  if (scroll >= shazam) {
+    $(header).addClass("visible");
+    $(header).css("position", "sticky");
+  } else if (scroll < shazam) {
+    // $(header).removeClass("visible");
+    $(header).css("position", "fixed");
+  }
+}); //missing );
 
 // —————————————— PARTICLES ——————————————
 
