@@ -20,24 +20,13 @@ a {
   color: inherit;
 }
 
-h1 {
-  position: absolute;
-  top: 40vh;
-  left: 50vw;
-  transform: translateX(-50%);
-  margin: auto;
-  font-size: 10vw;
-  color: white;
-  pointer-events: none;
-}
-
 header {
-  position: sticky;
+  position: fixed;
   display: flex;
   width: 100%;
-  height: 8vh;
-  background-color: rgba(0, 86, 148, 0.9);
-  z-index: 1;
+  height: 80px;
+  background-color: rgba(0, 86, 148, 0.95);
+  z-index: 3;
   transform: translateY(-100vh);
   visibility: hidden;
   top: 0;
@@ -50,12 +39,29 @@ header.visible {
   transition: transform 0.5s;
 }
 
-header a {
+.navbar-right a {
   transition: box-shadow 0.2s ease;
 }
 
-header a:hover {
-  box-shadow: 0px 10px 0px -1px white;
+.navbar-right a:hover,
+.navbar-right a.active {
+  box-shadow: 0 8px 0 0 white;
+}
+
+.heroTitleContainer {
+  margin: auto;
+  text-align: center;
+  padding: 0 8vmin;
+}
+
+.heroTitle {
+  font-size: 14vmin;
+  margin: 0 0 5vh;
+}
+
+.heroSubtitle {
+  font-size: 5vmin;
+  margin: 0;
 }
 
 h3 {
@@ -88,9 +94,9 @@ ul {
   margin-right: 1vw;
 }
 
-.click-area {
-  padding: 50px;
-  transform: translate(-30%, -35%);
+#page-1 {
+  height: 100vh;
+  display: flex;
 }
 
 .sectionsContainer {
@@ -99,17 +105,13 @@ ul {
   padding-bottom: 6vh;
 }
 
-#page-1 {
-  height: 100vh;
-}
-
 section {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-section h2 {
+.sectionTitle {
   font-size: 5vmin;
   margin: 0;
   padding-top: 10vmin;
@@ -119,7 +121,7 @@ section p {
   margin: auto;
   font-size: 4vmin;
   word-break: break-word;
-  line-height: 8vh;
+  line-height: 7vmin;
 }
 
 #page-2 p {
@@ -149,7 +151,7 @@ section p {
 .perk p {
   font-size: 3vmin;
   padding-top: 8vh;
-  line-height: 6vh;
+  line-height: 4vmin;
 }
 
 .tarif {
@@ -174,7 +176,7 @@ footer {
   width: 100%;
   background-color: rgba(0, 86, 148, 0.8);
   text-align: center;
-  padding: 4vh 0 8vh;
+  padding: 4vmin 0 2vmin;
 }
 
 .footerTitle {
@@ -193,6 +195,7 @@ footer {
 
 .footerInfoContainer p {
   padding-top: 2vh;
+  line-height: 2.5vh;
 }
 
 .footerInfoContainer h4,
@@ -202,6 +205,11 @@ footer {
 
 .footerBadge {
   width: 25%;
+}
+
+.footerInfo {
+  margin: 4vh 0 0;
+  color: #1baae4;
 }
 
 .maxiGlow {
@@ -216,17 +224,17 @@ footer {
 
 canvas {
   display: block;
-  vertical-align: bottom;
-} /* ---- particles.js container ---- */
+}
 #particles-js {
   position: fixed;
   width: 100%;
   height: 100%;
-  /*   background-color: #1BAAE4; */
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  /* KEEP EM BUBBLES FLOWIIIIIN <3 */
+  z-index: 1;
 } /* ---- stats.js ---- */
 .count-particles {
   background: #000022;
@@ -262,19 +270,28 @@ canvas {
 
 /* END OF PARTICLES.JS CSS */
 
-/* Keep section position relative for to not mess up scrollIntoView action of on arrow click */
-
-.arrow {
-  width: 4vmin;
-  height: auto;
+.arrowContainer {
+  display: flex;
+  width: 100%;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  margin-left: -20px;
+}
+
+.arrowLink {
+  margin: auto;
+  /* Same as arrow size */
+  padding: 5vmin;
+  z-index: 2;
+}
+
+.arrow {
+  width: 5vmin;
+  height: 5vmin;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
   background-size: contain;
-  z-index: 0;
   background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
 }
 
 .bounce {

@@ -11,7 +11,7 @@
     <title>Lav Express</title>
     <meta
       name="description"
-      content="Lav Express, une chaine de laveries automatiques sur plusieurs arrondissements de Paris, à Saint-Denis et à Marseille."
+      content="Lav Express, une chaine de laveries automatiques nationale"
     />
 
     <link
@@ -20,6 +20,22 @@
     />
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
+
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="#page-1">Lavexpress</a>
+      </div>
+      <div class="navbar-right">
+        <a href="#page-2">Qui sommes-nous</a>
+        <a href="#page-3">Pourquoi nous</a>
+        <a href="#page-4">Nos tarifs</a>
+        <a href="#page-5">Nos adresses</a>
+        <a href="#footer">Nos services</a>
+        <a href="#footer">Contact</a>
+      </div>
+    </nav>
+  </header>
 
   <body>
     <link
@@ -31,55 +47,38 @@
     <!-- particles.js container -->
     <div id="particles-js"></div>
     <section id="page-1">
-      <h1 class="maxiGlow">Lavexpress</h1>
-      <a href="#page-2">
-        <div class="arrow bounce">
-          <div class="click-area"></div>
-        </div>
-      </a>
-      <canvas
-        class="particles-js-canvas-el"
-        style="width: 100%; height: 100%;"
-        width="960"
-        height="767"
-      ></canvas>
+      <div class="heroTitleContainer">
+      <h1 class="heroTitle maxiGlow">Lavexpress</h1>
+      <h2 class="heroSubtitle">Une chaine de laveries automatiques nationale.</h2>
+    </div>
+      <div class="arrowContainer">
+        <a class="arrowLink" href="#page-2">
+          <div class="arrow bounce">
+          </div>
+        </a>
+      </div>
     </section>
 
     <div class="sectionsContainer">
-      <header>
-        <nav class="navbar">
-          <div class="navbar-left">
-            <a href="#page-1">Lavexpress</a>
-          </div>
-          <div class="navbar-right">
-            <a href="#page-2">Qui sommes-nous</a>
-            <a href="#page-3">Pourquoi nous</a>
-            <a href="#page-4">Nos tarifs</a>
-            <a href="#page-5">Nos adresses</a>
-          </div>
-        </nav>
-      </header>
       <section id="page-2">
-        <h2 class="miniGlow">Qui sommes-nous ?</h2>
+        <h2 class="sectionTitle miniGlow">Qui sommes-nous ?</h2>
         <p>
-          Une chaine de laveries automatiques sur plusieurs arrondissements de
-          Paris, à Saint-Denis et à Marseille.<br />
-          <br />
           Lav Express met à disposition des services de laveries automatiques
           ouvertes 7/7 équipées de matériel professionnel et performant
           ELECTROLUX, des machines à laver de multiples capacités (6/7/11 et
           18kg) et séchoirs de hautes qualités.
         </p>
-        <a href="#page-3">
-          <div class="arrow bounce">
-            <div class="click-area"></div>
-          </div>
-        </a>
+        <div class="arrowContainer">
+          <a class="arrowLink" href="#page-3">
+            <div class="arrow bounce">
+            </div>
+          </a>
+        </div>
       </section>
 
       <section id="page-3">
         <div class="why-us">
-          <h2 class="miniGlow">Pourquoi nous ?</h2>
+          <h2 class="sectionTitle miniGlow">Pourquoi nous ?</h2>
           <div class="badges">
             <div class="badge perk">
               <i class="fa fa-flash badgeIcon"></i>
@@ -104,15 +103,16 @@
             </div>
           </div>
         </div>
-        <a href="#page-4">
-          <div class="arrow bounce">
-            <div class="click-area"></div>
-          </div>
-        </a>
+        <div class="arrowContainer">
+          <a class="arrowLink" href="#page-4">
+            <div class="arrow bounce">
+            </div>
+          </a>
+        </div>
       </section>
 
       <section id="page-4">
-        <h2 class="miniGlow">Nos tarifs</h2>
+        <h2 class="sectionTitle miniGlow">Nos tarifs</h2>
         <div class="badges">
           <div class="tarif">
             <img src="../Assets/washingmachine.svg" class="badgeIcon"></img>
@@ -139,15 +139,16 @@
             <li>1€ la dosette</li>
           </div>
         </div>
-        <a href="#page-5">
-          <div class="arrow bounce">
-            <div class="click-area"></div>
-          </div>
-        </a>
+        <div class="arrowContainer">
+          <a class="arrowLink" href="#page-5">
+            <div class="arrow bounce">
+            </div>
+          </a>
+        </div>
       </section>
 
       <section id="page-5">
-        <h2 class="miniGlow">Nos adresses</h2>
+        <h2 class="sectionTitle miniGlow">Nos adresses</h2>
         <div class="badges">
           <div class="ville">
             <img src="../Assets/tour_eiffel.svg" class="badgeIcon"></img>
@@ -182,21 +183,16 @@
         </div>
       </section>
     </div>
-    <footer>
-        <a class="footerTitle" href="#contact">Lavexpress</a>
+    <footer id="footer">
       <nav class="footerInfoContainer">
         <div class="footerBadge">
           <h4>Services</h4>
-          <p>Couettes, Couverture, Rideaux, Linge courant, Lessive..</p>
-        </div>
-        <div class="footerBadge">
-          <h4>Informations</h4>
-          <p>Siege social lavexpress 30 Rue pinel saint denis 93200 Siret 813866761 rcs bobigny</p>
+          <p>Couettes, couvertures, tapis, linge courant, lessive..</p>
         </div>
         <div class="footerBadge">
           <h4>Contact</h4>
           <p>Tél: 06 50 24 52 79<br>
-          salavexpress@gmail.com </p>
+          salavexpress@gmail.com</p>
         </div>
         <div class="footerBadge">
           <h4>Horaires</h4>
@@ -204,6 +200,7 @@
           7/7 et jours fériés </p>
         </div>
       </nav>
+      <p class="footerInfo">Siège social: 30 Rue Pinel, 93200 Saint Denis. Siret: 813866761 RCS Bobigny</p>
     </footer>
 
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>

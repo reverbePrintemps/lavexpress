@@ -1,21 +1,49 @@
 // TODO
 
+$("header a").on("click", function () {
+  $("header a").removeClass("active");
+  $(this).addClass("active");
+});
+
 var header = $("header");
 
 $(window).scroll(function () {
-  var scroll = $(window).scrollTop();
+  var scrollTop = $(this).scrollTop();
+  var scrollBottom = $(this).scrollTop() + $(this).height();
   var shazam = $("#page-2").offset().top;
-  if (scroll <= 0) {
+  var bottom = $(document).height();
+
+  // Togle navbar element for info in footer when bottom of page reached
+  if (scrollBottom === bottom) {
+    $('a[href="#footer"]').addClass("active");
+  } else {
+    $('a[href="#footer"]').removeClass("active");
+  }
+
+  // Show/hide header on scroll
+  if (scrollTop <= 0) {
     $(header).removeClass("visible");
   }
-  if (scroll >= shazam) {
+  if (scrollTop >= shazam) {
     $(header).addClass("visible");
-    $(header).css("position", "sticky");
-  } else if (scroll < shazam) {
-    // $(header).removeClass("visible");
-    $(header).css("position", "fixed");
   }
-}); //missing );
+
+  // TODO fix slow behavior
+  // Underline section nav element on scroll
+  $("section").each(function () {
+    var id;
+    if (
+      scrollTop > $(this).offset().top &&
+      scrollTop <= $(this).offset().top + $(this).height()
+    ) {
+      id = $(this).attr("id");
+      $(`a[href="#${id}"]`).addClass("active");
+    } else {
+      id = $(this).attr("id");
+      $(`a[href="#${id}"]`).removeClass("active");
+    }
+  });
+});
 
 // —————————————— PARTICLES ——————————————
 
