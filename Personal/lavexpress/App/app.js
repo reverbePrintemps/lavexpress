@@ -1,17 +1,41 @@
 // TODO
 
+var header = $("header");
+var headerSize = $(header).height();
+var shazam = $("#page-2").offset().top;
+var bottom = $(document).height();
+
+$(".address").on("click", function () {
+  let address = $(this).text();
+  $(".googleMap").attr(
+    "src",
+    `https://www.google.com/maps/embed/v1/place?key=AIzaSyB7Uzw3kUS3XA9k2sIaX-7nn3BaxtFRQek
+  &q=${address}`
+  );
+});
+
 $("header a").on("click", function () {
   $("header a").removeClass("active");
   $(this).addClass("active");
 });
 
-var header = $("header");
-
 $(window).scroll(function () {
   var scrollTop = $(this).scrollTop();
   var scrollBottom = $(this).scrollTop() + $(this).height();
-  var shazam = $("#page-2").offset().top;
-  var bottom = $(document).height();
+
+  // TODO Fix buggy behavior
+  // TODO - disappears when mouse moves
+  // Show header on hover when in first page
+  if (scrollTop < shazam) {
+    $(window).on("mousemove", function (event) {
+      var mouseY = event.clientY;
+      if (mouseY <= headerSize) {
+        $(header).addClass("visible");
+      } else {
+        $(header).removeClass("visible");
+      }
+    });
+  }
 
   // Togle navbar element for info in footer when bottom of page reached
   if (scrollBottom === bottom) {
@@ -44,6 +68,11 @@ $(window).scroll(function () {
     }
   });
 });
+
+// Dynamically set year
+var today = new Date();
+var year = today.getFullYear();
+$(".thisYear").html(year);
 
 // —————————————— PARTICLES ——————————————
 

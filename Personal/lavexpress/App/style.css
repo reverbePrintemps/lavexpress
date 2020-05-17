@@ -1,7 +1,7 @@
 /* TODO */
 /* TODO Make responsive */
 /* TODO Don't rely on fontawesome loading icons (?) */
-/* TODO Align footer p to baseline */
+/* TODO Unify colors */
 
 html {
   scroll-behavior: smooth;
@@ -39,7 +39,28 @@ header.visible {
   transition: transform 0.5s;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  margin-left: 4vw;
+  white-space: nowrap;
+}
+
+.navbar-left a {
+  font-size: 4vw;
+}
+
+.navbar-right {
+  margin-right: 4vw;
+}
+
 .navbar-right a {
+  margin-left: 1vw;
   transition: box-shadow 0.2s ease;
 }
 
@@ -56,42 +77,29 @@ header.visible {
 
 .heroTitle {
   font-size: 14vmin;
-  margin: 0 0 5vh;
+  margin: 0 0 1vh;
+  white-space: nowrap;
 }
 
 .heroSubtitle {
-  font-size: 5vmin;
+  font-size: 3vmin;
   margin: 0;
 }
 
 h3 {
   font-size: 4vmin;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 li {
   list-style: none;
   font-size: 2vmin;
-  margin-top: 2vh;
-}
-
-ul {
-  padding: 0;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.navbar-left a {
-  margin-left: 1vw;
-  font-size: 4vmin;
-}
-
-.navbar-right a {
-  margin-right: 1vw;
+  margin-bottom: 2vh;
 }
 
 #page-1 {
@@ -100,72 +108,153 @@ ul {
 }
 
 .sectionsContainer {
-  padding: 0 11vmin;
-  /* Allow footer to not hide content */
-  padding-bottom: 6vh;
+  padding: 0 8vmin;
 }
 
-section {
+.sectionsContainer section {
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100vh;
 }
 
 .sectionTitle {
   font-size: 5vmin;
   margin: 0;
-  padding-top: 10vmin;
+  margin-top: 8vmin;
 }
 
 section p {
   margin: auto;
-  font-size: 4vmin;
   word-break: break-word;
-  line-height: 7vmin;
 }
 
-#page-2 p {
-  padding: 12vh 0;
+.whoAreWe {
+  margin: 1vmin;
+  background-color: white;
+  padding: 3vmin;
+  border-radius: 3vmin;
+  display: flex;
 }
 
-.why-us {
+.whoAreWe__textContainer {
+  margin: auto;
+  font-size: 3vmin;
+  color: #0d8ed2;
+  line-height: 4vmin;
+}
+
+.whyUs {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
+.badgesContainer {
+  height: 100%;
+  display: flex;
+}
+
 .badges {
   display: flex;
   text-align: center;
-  padding: 12vh 0 10vh;
-}
-
-.badge {
-  padding: 0 2vw;
+  margin: auto 0;
 }
 
 .perk {
-  width: 25vw;
+  width: 25%;
+  padding: 0 1vmin;
+  display: flex;
+  flex-direction: column;
+}
+
+.perk__textContainer {
+  display: flex;
+  background-color: white;
+  color: #0d8ed2;
+  height: 100%;
+  margin: 3vmin auto auto;
+  border-radius: 2vmin;
 }
 
 .perk p {
   font-size: 3vmin;
-  padding-top: 8vh;
+  padding: 1vmin;
   line-height: 4vmin;
+  word-break: keep-all;
 }
 
-.tarif {
+.tarifContainer {
   width: 33vw;
+  line-height: 3vmin;
+}
+
+.tarifContent {
+  padding-top: 5vmin;
 }
 
 .badgeIcon {
-  max-width: 20vmin;
-  height: 14vh;
   font-size: 11vmin;
+  padding: 4vmin;
+  background-color: white;
+  color: #0d8ed2;
+  clip-path: circle();
+  padding: 25% 0;
+  width: 100%;
 }
 
-.ville {
-  width: 50vw;
+.badgeIcon.m-xl {
+  height: 8vmin;
+}
+.badgeIcon.m-l {
+  height: 6vmin;
+}
+.badgeIcon.m-m {
+  height: 4vmin;
+}
+.badgeIcon.m-s {
+  height: 3vmin;
+}
+
+.cities {
+  width: 100%;
+  margin: auto;
+}
+
+.cities h3:nth-of-type(2) {
+  margin-top: 3vmin;
+}
+
+.googleMapContainer {
+  display: flex;
+  background-color: white;
+  color: #0274c2;
+  padding: 3vmin;
+  justify-content: space-between;
+  margin: auto;
+  border-radius: 4vmin;
+}
+
+.googleMap {
+  width: 100%;
+  min-width: 0;
+  border-radius: 2vmin;
+}
+
+.address {
+  border: none;
+  display: inline-block;
+  width: 100%;
+  background: none;
+  font-size: 2vmin;
+  text-align: left;
+  color: #0274c2;
+  cursor: pointer;
+  margin-top: 1vmin;
+}
+
+.address:hover {
+  color: rgb(0, 86, 148);
 }
 
 footer {
@@ -177,6 +266,7 @@ footer {
   background-color: rgba(0, 86, 148, 0.8);
   text-align: center;
   padding: 4vmin 0 2vmin;
+  z-index: 1;
 }
 
 .footerTitle {
@@ -220,6 +310,17 @@ footer {
   text-shadow: 1px 1px 4px white;
 }
 
+.lessive {
+  position: relative;
+}
+
+.softener {
+  font-size: 2vmin;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
 /* ——————————— PARTICLES.JS CSS ——————————— */
 
 canvas {
@@ -234,7 +335,7 @@ canvas {
   background-size: cover;
   background-position: 50% 50%;
   /* KEEP EM BUBBLES FLOWIIIIIN <3 */
-  z-index: 1;
+  /* z-index: 1; */
 } /* ---- stats.js ---- */
 .count-particles {
   background: #000022;
@@ -280,7 +381,7 @@ canvas {
 .arrowLink {
   margin: auto;
   /* Same as arrow size */
-  padding: 5vmin;
+  padding: 5vmin 5vmin 0;
   z-index: 2;
 }
 

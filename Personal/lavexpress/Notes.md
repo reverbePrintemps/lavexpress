@@ -4,18 +4,24 @@ Voici les infos dont tu vas avoir besoin pour la création du site :
 
 # Qui sommes-nous ?
 
-[X] Lav Express met à disposition des services de laveries automatiques ouvertes 7/7 équipées de matériel professionnel et performant ELECTROLUX, des machines à laver de multiples capacités (6/7/11 et 18kg) et séchoirs de hautes qualités.
+[X] Lav Express met à disposition des services de laveries automatiques ouvertes
+7/7 équipées de matériel professionnel et performant ELECTROLUX, des machines à
+laver de multiples capacités (6/7/11 et 18kg) et séchoirs de hautes qualités.
 
-[X] Des modes de paiement simples d’utilisation et connectés, avec des centrales de dernière génération (pièces, billets et paiement sans contact), ayant un écran tactile entraînant un gain de temps dans le processus d’achat. (tu trouveras une photo de la centrale qu'il faudra placer quelque parce quelle est assez mignone)
+[X] Des modes de paiement simples d’utilisation et connectés, avec des centrales
+de dernière génération (pièces, billets et paiement sans contact), ayant un
+écran tactile entraînant un gain de temps dans le processus d’achat.
+
+[X] Nos équipes de nettoyages et de maintenance font de l’hygiène et de la
+propreté nos priorités.
+
+[X] Notre SAV est gérée par nos conseillers qui,grâce à une technologie
+performante, assure les dépannages et les conseils à distance.
 
 # Pourquoi nous ?
 
-[] Libre accès et en self-service, entièrement automatisées
-[] Tarifs compétitifs
-[] Service wifi dans chaque laverie.
-[] Nos équipes de nettoyages et de maintenance font de l’hygiène et de la propreté nos priorités.
-[] Notre SAV est gérée par nos conseillers qui,grâce à une technologie performante, assure les dépannages et les conseils à distance.
-[] Ouvert 7/7j de 7h à 23h.
+[] Libre accès et en self-service, entièrement automatisées [] Tarifs
+compétitifs [] Service wifi dans chaque laverie. [] Ouvert 7/7j de 7h à 23h.
 
 # Nos tarifs :
 
